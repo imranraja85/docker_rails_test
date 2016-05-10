@@ -1,0 +1,9 @@
+version: '2'
+services:
+  mongodb:
+    image: mongo:3.2
+  app:
+    image: rails_app
+    build: .
+    depends_on:
+      - mongodb
